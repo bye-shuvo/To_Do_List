@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&family=Teko:wght@300..700&display=swap');
+
+:root {
+    --width: 100px;
+    --height: 100px;
+    --maxheight: 10vh;
+    --maxwidth: 10vw;
+    --gap: 20px;
+    --radius: 5px;
+    --padding: 5px;
+    --color: rgb(33, 40, 48);
+    --textboxcolor: rgb(55, 62, 72);
+    --padding: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: aliceblue;
+    font-family: "Teko", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color);
+    overflow: hidden;
+}
+
+#head {
+    font-size: 7vmax;
+    font-weight: bolder;
+}
+
+#main {
+    height: calc(var(--height)*5.46);
+    width: calc(var(--width)*6);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: calc(var(--gap)*2);
+    padding: calc(var(--padding)*2);
+}
+
+#input {
+    height: calc(var(--height)/1.8);
+    width: calc(var(--width)*3.5);
+    border-radius: calc(var(--radius)*2);
+    background: var(--textboxcolor);
+    border: none;
+    outline: none;
+    padding: calc(var(--padding)*2);
+    font-size: 1.6rem;
+}
+
+#input:focus {
+    border-bottom: 2.5px solid rgb(0, 68, 255);
+    font-size: 1.8rem;
+}
+
+.btn {
+    height: calc(var(--height)/2.5);
+    width: calc(var(--width)*3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    flex-direction: row;
+    gap: var(--gap);
+}
+
+#rm-btn,
+#add-btn {
+    cursor: pointer;
+    height: calc(var(--height)/2);
+    width: calc(var(--width)*1.15);
+    border: none;
+    font-size: 1.8rem;
+}
+
+#add-btn p {
+    position: relative;
+    height: 3rem;
+    width: 7.4rem;
+    outline: 1.7px solid white;
+    position: relative;
+    left: -8px;
+    top: -3px;
+    padding-top: 5px;
+    transition: all 0.4s ease-in-out;
+}
+
+#add-btn {
+    height: 3rem;
+    width: 7.4rem;
+    background: rgb(0, 110, 255);
+    transform: rotate(-3deg);
+    position: relative;
+    left: 0px;
+    top: -2px;
+    transition: all .4s ease-in-out;
+}
+
+#add-btn:hover {
+    position: relative;
+    height: 3rem;
+    width: 7.4rem;
+    left: -8px;
+    top: -3px;
+    box-shadow: 4px 4px 3px 0px rgb(103, 110, 120);
+}
+
+#add-btn p:hover{
+    left: 0px;
+    top: 0px;
+}
+
+#rm-btn {
+    background: red;
+    border-radius: calc(var(--radius)*2.5);
+    transition: all .4s ease-in-out;
+}
+
+#rm-btn:hover{
+    box-shadow: 0 5px 0px 0 rgb(131, 0, 0);
+    transform: scale(1.1);
+}
+
+#section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    max-height: calc(var(--height)*4);
+    width: 95%;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    font-size: 2rem;
+}
+
+.listitems {
+    height: calc(var(--height)/1.25);
+    width: calc(var(--width)*3.8);
+    border: 2px solid orange;
+    display: flex;   
+    align-items: center;
+    column-gap: var(--gap);
+    transform: skewX(-10deg);
+}
+
+.listitems div {
+    height: calc(var(--height)/1.25);
+    width: 30%;
+    border: 2px solid orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    transform: skewX(0deg);
+}
